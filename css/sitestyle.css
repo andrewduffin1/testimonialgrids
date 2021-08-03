@@ -1,0 +1,162 @@
+/* Imports the font family from Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap");
+
+/* Sets the margin and padding to 0 for the entire document */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Defines the background colour and declares the previously imported font family for content in the body */
+body {
+    background-color: #ecf2f8;
+    font-family: 'Barlow Semi Condensed';
+}
+
+/* gridItem is a class applied to all of the blocks of content, this properly spaces the items apart from each other by applying borders and padding */
+.gridItem {
+    border-radius: 10px;
+    margin: 15px;
+    padding: 30px;
+}
+
+/* Styles the user icons as circular and positions them to the left */
+.avatarIcon {
+    border-radius: 100px;
+    width: 30px;
+    float: left;
+}
+
+/* Defines a border colour for two of the avatar icons */
+#daniel .avatarIcon {
+    border: solid #a775f2;
+}
+  
+#patrick .avatarIcon {
+    border: solid #7541c8;
+}
+
+/* Positions the header away from the edge of the box */
+.header {
+    margin-left: 15px;
+}
+
+/* Makes the name text bold, sets its size and positions it away from the user picture */
+.reviewer {
+    font-weight: 500;
+    font-size: 13px;
+    margin-left: 50px;
+}
+
+/* Formatting of the verified graduate text, setting the weight, size and positioning */
+.verification {
+    font-weight: 500;
+    font-size: 13px;
+    opacity: 0.5;
+    margin-left: 50px;
+}
+
+/* Formatting of the heading message, setting the font style and padding to position it */
+.headerQuote {
+    padding-top: 20px;
+    padding-bottom: 28px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Sizes the body text, adjusts its weight, and sets it to a grey opacity */
+.bodyText {
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+#danielBackgroundImage {
+    color: #a775f2;
+    float: right;
+    margin: 0 20px 0 -100px;
+}
+
+#daniel {
+    background-color: #7541c8;
+    color: white;
+}
+
+#jonathan {
+    background-color: #48556a;
+    color: white;
+}
+
+#kira {
+    background-color: white;
+    color: #48556a;
+}
+
+#jeanette {
+    background-color: white;
+    color: #48556a;
+}
+
+#patrick {
+    background-color: #19212e;
+    color: white;
+}
+
+
+@media screen and (min-width: 1440px) {
+    #grid {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: repeat(2, 50%);
+        padding: 3vh 7.5vh;
+        margin: 30px 150px;
+    }
+
+    #daniel {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: hsl(263, 55%, 52%);
+        color: white;
+    }
+
+    #daniel .gridItem {
+        grid-template-columns: 50px 1fr 150px;
+    }
+        
+    #daniel .avatarIcon {
+        border: solid #a775f2;
+    }
+
+    #jonathan {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        background-color: hsl(217, 19%, 35%);
+    }
+    
+    #kira {
+        grid-column-start : 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(217, 19%, 35%);
+    }
+
+    #jeanette {
+        grid-column: 1;
+        grid-row: 2;
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(217, 19%, 35%);
+    }
+
+    #patrick {
+        grid-column: 2 / span 2;
+        grid-row: 2;
+        background-color: hsl(219, 29%, 14%);
+        color: white;
+    }
+}
+
+.attribution {
+    text-align: center;
+    padding-bottom: 2%;
+}
